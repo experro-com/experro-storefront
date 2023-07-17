@@ -1,6 +1,6 @@
 {
   "name": "experro-storefront",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/index.js",
   "types": "build/app-main-index.d.ts",
   "repository": {
@@ -11,22 +11,11 @@
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
-  "dependencies": {
-    "dompurify": "2.4.0",
-    "grapesjs": "0.19.5",
-    "grapesjs-blocks-basic": "1.0.1",
-    "jquery": "3.6.1",
-    "js-cookie": "3.0.1",
-    "react-accessible-accordion": "5.0.0",
-    "react-color": "2.19.3",
-    "react-froala-wysiwyg": "4.0.17",
-    "react-hot-toast": "2.4.0",
-    "react-jsx-parser": "1.29.0",
-    "react-modal": "3.16.1",
-    "react-router-dom": "6.4.1",
-    "react-select": "5.4.0",
-    "tslib": "2.4.0"
-  },
+  "files": [
+    "build",
+    "LICENSE.txt",
+    "README.md"
+  ],
   "engines": {
     "node": "16.16.0"
   }
