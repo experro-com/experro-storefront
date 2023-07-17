@@ -1,0 +1,15 @@
+import { TraitInterface } from '../../interfaces/trait.interface';
+import 'froala-editor/js/froala_editor.min.js';
+import 'froala-editor/js/plugins/align.min.js';
+import 'froala-editor/js/plugins/paragraph_format.min.js';
+import 'froala-editor/js/plugins/link.min.js';
+import 'froala-editor/js/plugins/table.min.js';
+import 'froala-editor/js/plugins/code_view.min.js';
+import 'froala-editor/js/plugins/fullscreen.min.js';
+import 'froala-editor/js/plugins/help.min.js';
+import 'froala-editor/js/third_party/embedly.min.js';
+import 'froala-editor/css/froala_style.min.css';
+import 'froala-editor/css/froala_editor.pkgd.min.css';
+import 'froala-editor/css/third_party/embedly.min.css';
+declare const expRichTextEditor: TraitInterface;
+export default expRichTextEditor;
