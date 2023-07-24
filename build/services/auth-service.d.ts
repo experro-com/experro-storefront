@@ -21,8 +21,9 @@ export declare class AuthService {
     static deleteCustomerAddress(AddressId: number): Promise<any>;
     static login({ username, password }: LoginRequest): Promise<any>;
     static logout(): Promise<any>;
-    static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken }: SignupInterface): Promise<any>;
+    static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
     static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
+    static activateCustomerAccount({ emailToken, password }: SetNewPassword): Promise<any>;
 }
 export {};

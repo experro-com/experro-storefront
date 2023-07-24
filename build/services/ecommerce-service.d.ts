@@ -83,5 +83,6 @@ export declare class EcommerceService {
     static getAutoCompleteList({ searchObj }: {
         searchObj: any;
     }): Promise<any>;
+    static emailTemplateForms(formId: string, formMapping: any): Promise<any>;
 }
 export {};
