@@ -70,10 +70,11 @@ export declare class EcommerceService {
         wishlistId: any;
         itemId: any;
     }): Promise<any>;
-    static searchProductByField({ fieldName, fieldValue, fieldsToQuery }: {
-        fieldName: any;
-        fieldValue: any;
-        fieldsToQuery: any;
+    static searchProductByField({ fieldName, fieldValue, fieldsToQuery, filter }: {
+        fieldName?: any;
+        fieldValue?: any;
+        fieldsToQuery?: any;
+        filter?: string;
     }): Promise<any>;
     static getContentModelName({ model }: {
         model: any;

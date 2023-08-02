@@ -34,10 +34,11 @@ export declare class AnalyticsService {
         productCategories: any;
         sku_for_analytics: any;
     }): Promise<void>;
-    static trackCategoryViewed({ categoryName, items, categoryId, sku, sku_for_analytics }: {
+    static trackCategoryViewed({ categoryName, items, categoryId, provider_id_esi, sku, sku_for_analytics }: {
         categoryName: string;
         items: any;
         categoryId: string;
+        provider_id_esi: string;
         sku?: string[];
         sku_for_analytics?: string[] | undefined;
     }): Promise<void>;
