@@ -52,4 +52,5 @@ export declare class BigCommerceEcomm {
         wishlistId: any;
         itemId: any;
     }): Promise<any>;
+    static subscribeToNewsLetter(email: any): Promise<any>;
 }

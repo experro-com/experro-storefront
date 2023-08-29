@@ -85,5 +85,6 @@ export declare class EcommerceService {
         searchObj: any;
     }): Promise<any>;
     static emailTemplateForms(formId: string, formMapping: any): Promise<any>;
+    static subscribeToNewsLetter(email: any): Promise<any>;
 }
 export {};
