@@ -1,6 +1,7 @@
 export declare class BigCommerceEcomm {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
+    static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static createCart({ customerId, line_items }: {
         customerId?: any;

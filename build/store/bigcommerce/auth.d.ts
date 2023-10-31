@@ -16,6 +16,7 @@ export declare class BigCommerceAuth {
     static deleteCustomerAddress(AddressId: number): Promise<any>;
     static getCountries(): Promise<any>;
     static getStates(countryCode: any): Promise<any>;
+    static forceLogout(): Promise<boolean>;
     static login({ username, password }: LoginRequest): Promise<any>;
     static logout(): Promise<any>;
     static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;

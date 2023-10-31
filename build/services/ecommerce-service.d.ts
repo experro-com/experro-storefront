@@ -4,9 +4,24 @@ interface ExpSearchProps {
     isAuto?: boolean;
     searchTerm?: any;
 }
+export interface widgetSearchWidgetData {
+    widget_id: string;
+    context_type?: string;
+    context_data?: string;
+    custom_filter?: any;
+    requested_user_id?: any;
+    product_ids?: any;
+}
+export interface widgetSearchObject {
+    skip?: string;
+    limit?: string;
+    fieldsToQuery?: string;
+    widgetData: widgetSearchWidgetData;
+}
 export declare class EcommerceService {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
+    static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static createCart({ customerId, line_items }: {
         customerId?: any;
@@ -86,5 +101,8 @@ export declare class EcommerceService {
     }): Promise<any>;
     static emailTemplateForms(formId: string, formMapping: any): Promise<any>;
     static subscribeToNewsLetter(email: any): Promise<any>;
+    static getUserLocation(): Promise<any>;
+    static getPersonalizationWidgetList(algorithmInternalName: any, fieldsToQuery?: string): Promise<any>;
+    static widgetSearch(searchWidgetObject?: widgetSearchObject): Promise<any>;
 }
 export {};

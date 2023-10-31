@@ -12,5 +12,6 @@ export declare class CommonUtilities {
     static getGoogleCdnMediaPrefix(): string;
     static getLocalState(key: any): any;
     static isMobileInAppBrowser(): string;
+    static generateUUID(): string;
     static isRenderingInHeadlessBrowser(): boolean;
 }
