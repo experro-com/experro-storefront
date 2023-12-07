@@ -42,6 +42,9 @@ export declare class EcommerceService {
         itemId?: any;
     }): Promise<any>;
     static search({ searchObj, enableSSR, isAuto, searchTerm }: ExpSearchProps): Promise<any>;
+    static searchAutoSuggest({ searchObj }: {
+        searchObj: any;
+    }): Promise<any>;
     static getSearchCount({ searchObj, key, componentId, enableSSR }: {
         searchObj: any;
         key: any;

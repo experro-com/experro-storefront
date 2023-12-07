@@ -1,3 +1,26 @@
+._grid-row-component_ {
+  border: 1px dotted;
+  min-height: 100px;
+  height: auto;
+}
+
+.exp-ui-builder-droppable-inner {
+  min-height: 100px;
+  border: 1px dotted;
+}
+
+.custom-fields .gjs-field.gjs-field-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #D1D5DB;
+  padding: 0;
+}
+
+.gjs-trt-trait--blog-card .custom-fields .gjs-label-wrp {
+  display: block;
+}
 /* add css module styles here (optional) */
 body .gjs-editor,
 body .visualBulderModal {
@@ -2188,29 +2211,6 @@ table.table tr td {
   margin: -0.1em 0.1em 0.1em;
   line-height: 1;
   vertical-align: middle;
-}
-._grid-row-component_ {
-  border: 1px dotted;
-  min-height: 100px;
-  height: auto;
-}
-
-.exp-ui-builder-droppable-inner {
-  min-height: 100px;
-  border: 1px dotted;
-}
-
-.custom-fields .gjs-field.gjs-field-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background-color: transparent;
-  border: 1px solid #D1D5DB;
-  padding: 0;
-}
-
-.gjs-trt-trait--blog-card .custom-fields .gjs-label-wrp {
-  display: block;
 }
 /*!
  * froala_editor v4.0.17 (https://www.froala.com/wysiwyg-editor)

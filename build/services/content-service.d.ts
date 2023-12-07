@@ -35,6 +35,22 @@ interface GetContentModelRecordsByFieldKeyValue {
     relationFieldDataToQuery?: string;
     filter?: any;
     enableSSR?: any;
+    fieldType?: 'parent' | 'child';
+}
+interface fetchContentModelRecordsByFieldKeyValue {
+    modelInternalName: string;
+    fieldKey: string;
+    fieldValue: string;
+    fieldsToQuery: string;
+    sortBy?: string;
+    orderBy?: string;
+    contentDataSortBy?: string;
+    limit?: string;
+    skip?: string;
+    relationField?: string;
+    relationFieldDataToQuery?: string;
+    filter?: any;
+    enableSSR?: any;
 }
 export declare class ContentService {
     private static __pageData__;
@@ -43,7 +59,8 @@ export declare class ContentService {
     static getCollectionTypeContentById({ id, versionId, modelName, componentId, ssrKey, enableSSR, }: GetCollectionContentByIdRequest): Promise<any>;
     static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, }: GetSingleTypeContentRequest): Promise<any>;
     static getMenuById(menuId: any): Promise<any>;
-    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
+    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
+    static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getPageData(): any;
     static setPageData(pageData: any): void;
     static parseVariableSafeValue(variableName: any): any;
