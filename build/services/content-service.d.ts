@@ -51,6 +51,7 @@ interface fetchContentModelRecordsByFieldKeyValue {
     relationFieldDataToQuery?: string;
     filter?: any;
     enableSSR?: any;
+    fieldType?: 'parent' | 'child';
 }
 export declare class ContentService {
     private static __pageData__;
@@ -60,7 +61,7 @@ export declare class ContentService {
     static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, }: GetSingleTypeContentRequest): Promise<any>;
     static getMenuById(menuId: any): Promise<any>;
     static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
-    static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
+    static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getPageData(): any;
     static setPageData(pageData: any): void;
     static parseVariableSafeValue(variableName: any): any;
