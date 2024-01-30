@@ -2,6 +2,7 @@ interface GetPageDataRequest {
     pageSlug: string;
     versionId?: string;
     lang?: string;
+    callForceFully?: boolean;
 }
 interface GetSingleTypeContentRequest {
     versionId: string;
@@ -9,6 +10,7 @@ interface GetSingleTypeContentRequest {
     componentId: string;
     ssrKey: string;
     enableSSR: boolean;
+    callForceFully?: boolean;
 }
 interface GetCollectionContentByIdRequest {
     id: string | undefined;
@@ -36,6 +38,7 @@ interface GetContentModelRecordsByFieldKeyValue {
     filter?: any;
     enableSSR?: any;
     fieldType?: 'parent' | 'child';
+    callForceFully?: boolean;
 }
 interface fetchContentModelRecordsByFieldKeyValue {
     modelInternalName: string;
@@ -55,12 +58,12 @@ interface fetchContentModelRecordsByFieldKeyValue {
 }
 export declare class ContentService {
     private static __pageData__;
-    static getPageDataBySlug({ pageSlug, versionId, lang, }: GetPageDataRequest): Promise<any>;
+    static getPageDataBySlug({ pageSlug, versionId, lang, callForceFully, }: GetPageDataRequest): Promise<any>;
     static getCollectionRecordsByCollectionInternalName({ modelInternalName, }: GetCollectionRecordsByInternalName): Promise<any>;
     static getCollectionTypeContentById({ id, versionId, modelName, componentId, ssrKey, enableSSR, }: GetCollectionContentByIdRequest): Promise<any>;
-    static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, }: GetSingleTypeContentRequest): Promise<any>;
+    static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, callForceFully, }: GetSingleTypeContentRequest): Promise<any>;
     static getMenuById(menuId: any): Promise<any>;
-    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
+    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType, callForceFully, }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
     static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getPageData(): any;
     static setPageData(pageData: any): void;
