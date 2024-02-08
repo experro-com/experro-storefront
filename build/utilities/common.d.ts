@@ -3,6 +3,7 @@ export declare class CommonUtilities {
     static getTenantId(): any;
     static getWorkspaceId(): any;
     static getEnvironmentId(): any;
+    static getHostname(): any;
     static getEnvironmentType(): any;
     static getCacheDomain(): any;
     static isRenderingOnServer(): boolean;
@@ -14,4 +15,6 @@ export declare class CommonUtilities {
     static isMobileInAppBrowser(): string;
     static generateUUID(): string;
     static isRenderingInHeadlessBrowser(): boolean;
+    static setCurrency(currenyToSet: any): void;
+    static getCurrency(): any;
 }

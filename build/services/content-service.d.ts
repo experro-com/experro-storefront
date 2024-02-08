@@ -58,7 +58,7 @@ interface fetchContentModelRecordsByFieldKeyValue {
 }
 export declare class ContentService {
     private static __pageData__;
-    static getPageDataBySlug({ pageSlug, versionId, lang, callForceFully, }: GetPageDataRequest): Promise<any>;
+    static getPageDataBySlug({ pageSlug, versionId, lang, }: GetPageDataRequest): Promise<any>;
     static getCollectionRecordsByCollectionInternalName({ modelInternalName, }: GetCollectionRecordsByInternalName): Promise<any>;
     static getCollectionTypeContentById({ id, versionId, modelName, componentId, ssrKey, enableSSR, }: GetCollectionContentByIdRequest): Promise<any>;
     static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, callForceFully, }: GetSingleTypeContentRequest): Promise<any>;
