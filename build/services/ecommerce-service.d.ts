@@ -107,6 +107,5 @@ export declare class EcommerceService {
     static getUserLocation(): Promise<any>;
     static getPersonalizationWidgetList(algorithmInternalName: any, fieldsToQuery?: string): Promise<any>;
     static widgetSearch(searchWidgetObject?: widgetSearchObject): Promise<any>;
-    static createProduct(product: any): Promise<any>;
 }
 export {};

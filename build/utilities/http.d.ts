@@ -15,11 +15,10 @@ interface HttpRequest {
     componentId?: string;
     excludeCommonHeaders?: boolean;
     language?: string;
-    callForceFully?: boolean;
 }
 export declare class Http {
     private static request;
-    static get({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language, callForceFully }: HttpRequest): Promise<any>;
+    static get({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
     static post({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
     static put({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
     static patch({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;

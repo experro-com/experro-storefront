@@ -1,13 +1,7 @@
-import React from 'react';
-declare const Page: ({ templates, components, componentToLoad }: {
+declare const Page: ({ templates, components, componentToLoad, Loader }: {
     templates: any;
     components: any;
     componentToLoad?: any;
-}) => React.CElement<{
-    pageData: any;
-    components: any;
-}, React.Component<{
-    pageData: any;
-    components: any;
-}, any, any>>;
+    Loader?: any;
+}) => JSX.Element;
 export { Page };

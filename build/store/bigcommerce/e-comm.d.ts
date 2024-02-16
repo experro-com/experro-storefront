@@ -20,7 +20,7 @@ export declare class BigCommerceEcomm {
     }): Promise<any>;
     static deleteItemInCart({ itemId }: {
         itemId?: any;
-    }): Promise<any>;
+    }): Promise<void>;
     static getProductReviewsByProductId({ productId }: {
         productId: any;
     }): Promise<any>;

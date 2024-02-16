@@ -2,7 +2,6 @@ interface GetPageDataRequest {
     pageSlug: string;
     versionId?: string;
     lang?: string;
-    callForceFully?: boolean;
 }
 interface GetSingleTypeContentRequest {
     versionId: string;
@@ -10,7 +9,6 @@ interface GetSingleTypeContentRequest {
     componentId: string;
     ssrKey: string;
     enableSSR: boolean;
-    callForceFully?: boolean;
 }
 interface GetCollectionContentByIdRequest {
     id: string | undefined;
@@ -38,7 +36,23 @@ interface GetContentModelRecordsByFieldKeyValue {
     filter?: any;
     enableSSR?: any;
     fieldType?: 'parent' | 'child';
-    callForceFully?: boolean;
+}
+interface getLocationPlaces {
+    radius: any;
+    modelInternalName: string;
+    fieldKey: string;
+    fieldValue: string;
+    fieldsToQuery: string;
+    sortBy?: string;
+    sortType?: string;
+    contentDataSortBy?: string;
+    limit?: string;
+    skip?: string;
+    relationField?: string;
+    relationFieldDataToQuery?: string;
+    filter?: any;
+    enableSSR?: any;
+    fieldType?: 'parent' | 'child';
 }
 interface fetchContentModelRecordsByFieldKeyValue {
     modelInternalName: string;
@@ -61,9 +75,16 @@ export declare class ContentService {
     static getPageDataBySlug({ pageSlug, versionId, lang, }: GetPageDataRequest): Promise<any>;
     static getCollectionRecordsByCollectionInternalName({ modelInternalName, }: GetCollectionRecordsByInternalName): Promise<any>;
     static getCollectionTypeContentById({ id, versionId, modelName, componentId, ssrKey, enableSSR, }: GetCollectionContentByIdRequest): Promise<any>;
-    static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, callForceFully, }: GetSingleTypeContentRequest): Promise<any>;
+    static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, }: GetSingleTypeContentRequest): Promise<any>;
     static getMenuById(menuId: any): Promise<any>;
-    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType, callForceFully, }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
+    static getVariantDataByExperimentId(experimentId: string): Promise<any>;
+    static getExperimentList(): Promise<any>;
+    static getExperimentVariantData({ variantId, fields, }: {
+        variantId: string;
+        fields?: string;
+    }): Promise<any>;
+    static getLocationPlaces({ radius, modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: getLocationPlaces): Promise<any>;
+    static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
     static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getPageData(): any;
     static setPageData(pageData: any): void;

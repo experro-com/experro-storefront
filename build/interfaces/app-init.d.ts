@@ -7,4 +7,5 @@ export interface AppInit {
     headerComponent: any;
     footerComponent: any;
     pencilBannerComponent?: any;
+    loader?: any;
 }
