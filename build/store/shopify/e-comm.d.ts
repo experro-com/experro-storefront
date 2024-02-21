@@ -6,11 +6,12 @@ export declare class ShopifyEcomm {
     static addToCart({ line_items }: {
         line_items?: any;
     }): Promise<any>;
-    static updateCart({ itemId, line_item }: {
+    static updateCart({ itemId, line_item, }: {
         itemId?: any;
         line_item?: any;
     }): Promise<any>;
     static deleteItemInCart({ itemId }: {
         itemId: any;
     }): Promise<void>;
+    static createProduct(product: any): Promise<any>;
 }

@@ -22,6 +22,7 @@ let Switch = cmsAppExportObjects.Switch;
 let Page = cmsAppExportObjects.Page;
 let AnalyticsService = cmsAppExportObjects.AnalyticsService;
 let BigcommerceService = cmsAppExportObjects.BigcommerceService;
+let Select = cmsAppExportObjects.Select;
 
 if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -49,7 +50,7 @@ if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   Page = uiBuilderAppExportObjects.Page;
   AnalyticsService = uiBuilderAppExportObjects.AnalyticsService;
   BigcommerceService = uiBuilderAppExportObjects.BigcommerceService;
-
+  Select = cmsAppExportObjects.Select;
 }
 
 export {
@@ -74,5 +75,6 @@ export {
   EcommerceService,
   Page,
   AnalyticsService,
-  BigcommerceService
-}
+  BigcommerceService,
+  Select,
+};

@@ -7,5 +7,6 @@ import { useParams, Navigate, Link, useNavigate, useSearchParams, BrowserRouter 
 import toast from 'react-hot-toast';
 import { Page } from './components';
 import { ContentService, AuthService, EcommerceService, AnalyticsService, BigcommerceService } from "./services";
+import Select from 'react-select';
 declare const IsCMSApp: boolean;
-export { App, Http, Widget, DraggableArea, ContentService, AuthService, UserContext, IsCMSApp, useParams, Navigate, useNavigate, Link, toast, CommonUtilities, useSearchParams, Route, Router, Switch, EcommerceService, Page, AnalyticsService, BigcommerceService };
+export { App, Http, Widget, DraggableArea, ContentService, AuthService, UserContext, IsCMSApp, useParams, Navigate, useNavigate, Link, toast, CommonUtilities, useSearchParams, Route, Router, Switch, EcommerceService, Page, AnalyticsService, BigcommerceService, Select };

@@ -1,6 +1,5 @@
-declare const RedirectPageRouter: ({ templates, components, loader }: {
+declare const RedirectPageRouter: ({ templates, components }: {
     templates: any;
     components: any;
-    loader?: any;
 }) => JSX.Element;
 export { RedirectPageRouter };

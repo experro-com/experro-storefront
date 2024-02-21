@@ -15,7 +15,7 @@ export declare class AnalyticsService {
         dur: any;
         eventData: any;
     }): Promise<void>;
-    static trackProductSearched({ search_location, searchTerm, sku_for_analytics, noOfResults, sku, products_detail, }: {
+    static trackProductSearched({ search_location, searchTerm, sku_for_analytics, noOfResults, sku, products_detail }: {
         search_location?: string;
         searchTerm: string | undefined;
         noOfResults: number | undefined;
@@ -23,23 +23,10 @@ export declare class AnalyticsService {
         sku_for_analytics?: string[] | undefined;
         products_detail?: string[] | undefined;
     }): Promise<void>;
-    static trackWidgetViewed({ noOfResults, mode, products_detail, sku, sku_for_analytics, algorithm, rule, rule_type, widget_id, context_type, context_data, variant, }: {
-        noOfResults: any;
-        mode: any;
-        products_detail: any;
-        sku: any;
-        sku_for_analytics: any;
-        algorithm: any;
-        rule: any;
-        rule_type: any;
-        widget_id: any;
-        context_type: any;
-        context_data: any;
-        variant: any;
-    }): Promise<void>;
-    static trackWidgetProductViewed({ sku, mode, image, price, name, brand, productCategories, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, }: any): Promise<void>;
-    static trackProductViewed({ sku, mode, image, widgetId, searchTerm, search_location, category, price, name, brand, productCategories, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, }: any): Promise<void>;
-    static trackCategoryViewed({ categoryName, items, categoryId, provider_id_esi, sku, sku_for_analytics, products_detail, }: {
+    static trackWidgetProductViewed({ sku, image, price, name, brand, productCategories, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules }: any): Promise<void>;
+    static trackWidgetViewed({ noOfResults, products_detail, sku, sku_for_analytics, algorithm, rule, rule_type, widget_id, context_type, context_data, variant }: any): Promise<void>;
+    static trackProductViewed({ sku, mode, image, searchTerm, search_location, category, price, name, brand, productCategories, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules }: any): Promise<void>;
+    static trackCategoryViewed({ categoryName, items, categoryId, provider_id_esi, sku, sku_for_analytics, products_detail }: {
         categoryName: string;
         items: any;
         categoryId: string;
@@ -48,9 +35,9 @@ export declare class AnalyticsService {
         sku_for_analytics?: string[] | undefined;
         products_detail?: string[] | undefined;
     }): Promise<void>;
-    static trackProductAddedToCart({ sku, sku_for_analytics, variantSku, mode, searchTerm, search_location, category, totalValue, quantity, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, }: any): Promise<void>;
-    static trackProductRemovedFromCart({ sku, sku_for_analytics, totalValue, quantity, productCategories, variant_sku, search_location, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, }: any): Promise<void>;
-    static trackProductPurchased({ sku, product_categories, variantSku, mode, widgetId, searchTerm, search_location, category, totalValue, quantity, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, }: any): Promise<void>;
+    static trackProductAddedToCart({ sku, sku_for_analytics, variantSku, mode, searchTerm, search_location, category, totalValue, quantity, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules }: any): Promise<void>;
+    static trackProductRemovedFromCart({ sku, sku_for_analytics, totalValue, quantity, productCategories, variant_sku, search_location, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules }: any): Promise<void>;
+    static trackProductPurchased({ sku, product_categories, variantSku, mode, widgetId, searchTerm, search_location, category, totalValue, quantity, sku_for_analytics, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules }: any): Promise<void>;
     static trackCartViewed({ totalValue, totalQuantity, items }: {
         totalValue: any;
         totalQuantity: any;

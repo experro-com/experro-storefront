@@ -1,13 +1,12 @@
 export declare class CommonUtilities {
     static getLanguage(): string;
-    static setLanguage(language: string): void;
-    static getDeviceId(): any;
-    static getUserId(): any;
     static getTenantId(): any;
     static getWorkspaceId(): any;
     static getEnvironmentId(): any;
+    static getHostname(): any;
     static getEnvironmentType(): any;
     static getCacheDomain(): any;
+    static isExperroDomain(): boolean;
     static isRenderingOnServer(): boolean;
     static getStoreHash(): any;
     static utf8_to_b64(str: any): any;
