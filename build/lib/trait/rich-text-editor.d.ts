@@ -1,9 +1,13 @@
 import { TraitInterface } from '../../interfaces/trait.interface';
 import 'froala-editor/js/froala_editor.min.js';
 import 'froala-editor/js/plugins/align.min.js';
+import 'froala-editor/js/plugins/lists.min.js';
 import 'froala-editor/js/plugins/paragraph_format.min.js';
 import 'froala-editor/js/plugins/link.min.js';
 import 'froala-editor/js/plugins/table.min.js';
+import 'froala-editor/js/plugins/font_size.min.js';
+import 'froala-editor/js/plugins/colors.min.js';
+import 'froala-editor/js/plugins/paragraph_style.min.js';
 import 'froala-editor/js/plugins/code_view.min.js';
 import 'froala-editor/js/plugins/fullscreen.min.js';
 import 'froala-editor/js/plugins/help.min.js';

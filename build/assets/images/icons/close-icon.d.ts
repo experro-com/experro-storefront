@@ -1,1 +1,2 @@
-export declare const CloseIcon: () => JSX.Element;
+import React from "react";
+export declare const CloseIcon: () => React.JSX.Element;

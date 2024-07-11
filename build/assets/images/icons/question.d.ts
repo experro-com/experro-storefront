@@ -1,1 +1,2 @@
-export declare const IconQuestion: () => JSX.Element;
+import React from 'react';
+export declare const IconQuestion: () => React.JSX.Element;

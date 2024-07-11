@@ -1,3 +1,4 @@
+import React from 'react';
 interface DraggableAreaInterface {
     style?: any;
     cssClass?: string;
@@ -6,5 +7,5 @@ interface DraggableAreaInterface {
     components: any;
     modelField?: any;
 }
-declare const DraggableArea: ({ style, cssClass, id, pageData, components, modelField }: DraggableAreaInterface) => JSX.Element;
+declare const DraggableArea: ({ style, cssClass, id, pageData, components, modelField }: DraggableAreaInterface) => React.JSX.Element;
 export { DraggableArea };

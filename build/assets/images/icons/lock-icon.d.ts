@@ -1,1 +1,2 @@
-export declare const LockIcon: () => JSX.Element;
+import React from "react";
+export declare const LockIcon: () => React.JSX.Element;

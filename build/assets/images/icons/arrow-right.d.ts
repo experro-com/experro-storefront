@@ -1,1 +1,2 @@
-export declare const IconArrowRight: () => JSX.Element;
+import React from 'react';
+export declare const IconArrowRight: () => React.JSX.Element;

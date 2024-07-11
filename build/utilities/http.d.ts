@@ -16,11 +16,13 @@ interface HttpRequest {
     excludeCommonHeaders?: boolean;
     language?: string;
     callForceFully?: boolean;
+    signal?: any;
+    appendLanguageFromQueryParams?: boolean;
 }
 export declare class Http {
     private static request;
-    static get({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language, callForceFully }: HttpRequest): Promise<any>;
-    static post({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
+    static get({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language, callForceFully, appendLanguageFromQueryParams }: HttpRequest): Promise<any>;
+    static post({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language, signal }: HttpRequest): Promise<any>;
     static put({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
     static patch({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;
     static delete({ key, url, config, enableSSR, componentId, excludeCommonHeaders, language }: HttpRequest): Promise<any>;

@@ -3,6 +3,18 @@ interface ExpSearchProps {
     enableSSR?: boolean;
     isAuto?: boolean;
     searchTerm?: any;
+    signal?: any;
+}
+interface ExpSearchCountProps {
+    searchObj?: any;
+    signal?: any;
+    key?: any;
+    componentId?: any;
+    enableSSR?: any;
+}
+interface ExpSearchAutoSuggestProps {
+    searchObj?: any;
+    signal?: any;
 }
 export interface widgetSearchWidgetData {
     widget_id: string;
@@ -23,6 +35,7 @@ export declare class EcommerceService {
     static getCart(): Promise<any>;
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
+    static getOrderById(orderId: string | number): Promise<any>;
     static createCart({ customerId, line_items }: {
         customerId?: any;
         line_items?: any;
@@ -41,20 +54,14 @@ export declare class EcommerceService {
     static deleteItemInCart({ itemId }: {
         itemId?: any;
     }): Promise<any>;
-    static search({ searchObj, enableSSR, isAuto, searchTerm }: ExpSearchProps): Promise<any>;
-    static searchAutoSuggest({ searchObj }: {
-        searchObj: any;
-    }): Promise<any>;
-    static getSearchCount({ searchObj, key, componentId, enableSSR }: {
-        searchObj: any;
-        key: any;
-        componentId: any;
-        enableSSR?: boolean;
-    }): Promise<any>;
+    static search({ searchObj, enableSSR, isAuto, searchTerm, signal }: ExpSearchProps): Promise<any>;
+    static searchAutoSuggest({ searchObj, signal }: ExpSearchAutoSuggestProps): Promise<any>;
+    static getSearchCount({ searchObj, key, componentId, enableSSR, signal }: ExpSearchCountProps): Promise<any>;
     static facetedSearch({ searchObj }: {
         searchObj: any;
     }): Promise<any>;
     static getFacetByCategoryName(categoryName: any): Promise<any>;
+    static getCategoriesAndSubCategories(categoryId?: string): Promise<any>;
     static getAllFacet(): Promise<any>;
     static getProductReviewsByProductId({ productId }: {
         productId?: any;

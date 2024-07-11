@@ -1,4 +1,5 @@
+import React from 'react';
 declare function Footer({ footerComponent }: {
     footerComponent: any;
-}): JSX.Element;
+}): React.JSX.Element;
 export { Footer };

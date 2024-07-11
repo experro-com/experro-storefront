@@ -4,4 +4,5 @@ import { handelEditDataOfContentLibraryFromUiBuilder } from './edit-data-common'
 import { pageScriptManager } from './page-script-manager';
 import { configureDevelopmentEnvironment } from './error-wrapper';
 import { setSEODetails } from './seo';
-export { Http, CommonUtilities, handelEditDataOfContentLibraryFromUiBuilder, pageScriptManager, configureDevelopmentEnvironment, setSEODetails, };
+import { contentServiceResponseParser } from './content-service-response-parser';
+export { Http, CommonUtilities, handelEditDataOfContentLibraryFromUiBuilder, pageScriptManager, configureDevelopmentEnvironment, setSEODetails, contentServiceResponseParser, };

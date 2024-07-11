@@ -1,1 +1,2 @@
-export declare const PencilIcon: () => JSX.Element;
+import React from "react";
+export declare const PencilIcon: () => React.JSX.Element;

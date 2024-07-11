@@ -1,5 +1,6 @@
+import React from 'react';
 declare const RedirectPageRouter: ({ templates, components }: {
     templates: any;
     components: any;
-}) => JSX.Element;
+}) => React.JSX.Element;
 export { RedirectPageRouter };

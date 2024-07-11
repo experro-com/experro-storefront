@@ -1,2 +1,3 @@
-declare const ShoppingIconWithoutBackground: () => JSX.Element;
+import React from 'react';
+declare const ShoppingIconWithoutBackground: () => React.JSX.Element;
 export default ShoppingIconWithoutBackground;

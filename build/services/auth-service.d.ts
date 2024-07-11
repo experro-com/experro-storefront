@@ -7,6 +7,7 @@ interface LoginRequest {
 export declare class AuthService {
     private static __userDetails__;
     static checkSessionInfo(): Promise<any>;
+    static getUserSessionInfo(): Promise<any>;
     static isUserLoggedIn(): boolean;
     static getUserDetails(): any;
     static setUserDetails(userDetails: any, isRefresh?: any): void;

@@ -1,4 +1,5 @@
+import React from 'react';
 declare function Header({ headerComponent }: {
     headerComponent: any;
-}): JSX.Element;
+}): React.JSX.Element;
 export { Header };

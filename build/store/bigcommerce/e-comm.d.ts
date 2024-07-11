@@ -3,6 +3,7 @@ export declare class BigCommerceEcomm {
     static getCart(): Promise<any>;
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
+    static getOrderById(orderId: string | number): Promise<any>;
     static createCart({ customerId, line_items }: {
         customerId?: any;
         line_items?: any;

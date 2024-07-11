@@ -1,1 +1,2 @@
-export declare const IconTrash: () => JSX.Element;
+import React from 'react';
+export declare const IconTrash: () => React.JSX.Element;

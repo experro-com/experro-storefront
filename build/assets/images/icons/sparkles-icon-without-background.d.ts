@@ -1,2 +1,3 @@
-declare const SparklesIconWithoutBackground: () => JSX.Element;
+import React from 'react';
+declare const SparklesIconWithoutBackground: () => React.JSX.Element;
 export default SparklesIconWithoutBackground;

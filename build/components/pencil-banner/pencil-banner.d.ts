@@ -1,4 +1,5 @@
+import React from 'react';
 declare function PencilBanner({ pencilBanner }: {
     pencilBanner: any;
-}): JSX.Element;
+}): React.JSX.Element;
 export { PencilBanner };

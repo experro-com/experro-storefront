@@ -1,2 +1,3 @@
-declare const FavouriteIconWithoutBackground: () => JSX.Element;
+import React from 'react';
+declare const FavouriteIconWithoutBackground: () => React.JSX.Element;
 export default FavouriteIconWithoutBackground;

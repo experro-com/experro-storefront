@@ -1,1 +1,2 @@
-export declare const CheckBlueIcon: () => JSX.Element;
+import React from "react";
+export declare const CheckBlueIcon: () => React.JSX.Element;

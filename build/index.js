@@ -7,7 +7,6 @@ let DraggableArea = cmsAppExportObjects.DraggableArea;
 let ContentService = cmsAppExportObjects.ContentService;
 let AuthService = cmsAppExportObjects.AuthService;
 let EcommerceService = cmsAppExportObjects.EcommerceService;
-let UserContext = cmsAppExportObjects.UserContext;
 let IsCMSApp = cmsAppExportObjects.IsCMSApp;
 let useParams = cmsAppExportObjects.useParams;
 let Navigate = cmsAppExportObjects.Navigate;
@@ -23,6 +22,7 @@ let Page = cmsAppExportObjects.Page;
 let AnalyticsService = cmsAppExportObjects.AnalyticsService;
 let BigcommerceService = cmsAppExportObjects.BigcommerceService;
 let Select = cmsAppExportObjects.Select;
+let contentServiceResponseParser = cmsAppExportObjects.contentServiceResponseParser;
 
 if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -35,7 +35,6 @@ if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   ContentService = uiBuilderAppExportObjects.ContentService;
   AuthService = uiBuilderAppExportObjects.AuthService;
   EcommerceService = uiBuilderAppExportObjects.EcommerceService;
-  UserContext = uiBuilderAppExportObjects.UserContext;
   IsCMSApp = uiBuilderAppExportObjects.IsCMSApp;
   useParams = uiBuilderAppExportObjects.useParams;
   Navigate = uiBuilderAppExportObjects.Navigate;
@@ -50,7 +49,8 @@ if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   Page = uiBuilderAppExportObjects.Page;
   AnalyticsService = uiBuilderAppExportObjects.AnalyticsService;
   BigcommerceService = uiBuilderAppExportObjects.BigcommerceService;
-  Select = cmsAppExportObjects.Select;
+  Select = uiBuilderAppExportObjects.Select;
+  contentServiceResponseParser = uiBuilderAppExportObjects.contentServiceResponseParser;
 }
 
 export {
@@ -60,7 +60,6 @@ export {
   DraggableArea,
   ContentService,
   AuthService,
-  UserContext,
   IsCMSApp,
   useParams,
   Navigate,
@@ -77,4 +76,5 @@ export {
   AnalyticsService,
   BigcommerceService,
   Select,
+  contentServiceResponseParser,
 };

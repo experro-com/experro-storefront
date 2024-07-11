@@ -1,5 +1,5 @@
 import React from 'react';
-declare const Page: ({ templates, components, componentToLoad }: {
+declare const Page: ({ templates, components, componentToLoad, }: {
     templates: any;
     components: any;
     componentToLoad?: any;
