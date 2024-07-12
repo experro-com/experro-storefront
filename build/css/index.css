@@ -174,7 +174,9 @@ body .storefront-modal button {
 }
 body .gjs-editor select,
 body .storefront-modal select {
-  background-position-x: calc(100% - 12px);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTYnIHZpZXdCb3g9JzAgMCAxNiAxNicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZyBjbGlwLXBhdGg9J3VybCgjY2xpcDBfMTExMTZfMTEyNjIpJz48cGF0aCBkPSdNNCA2TDggMTBMMTIgNicgc3Ryb2tlPScjQTNBM0EzJyBzdHJva2Utd2lkdGg9JzEuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJy8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0nY2xpcDBfMTExMTZfMTEyNjInPjxyZWN0IHdpZHRoPScxNicgaGVpZ2h0PScxNicgZmlsbD0nd2hpdGUnLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4K");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -851,6 +853,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border: none;
   cursor: pointer;
   color: #9D9CAF;
+  background-image: none;
 }
 .gjs-pn-views-container .gjs-sm-sectors .gjs-field .gjs-field-units select.gjs-input-unit:hover, .gjs-pn-views-container .gjs-sm-sectors .gjs-field .gjs-field-units select.gjs-input-unit:focus {
   color: #FFFFFF;
