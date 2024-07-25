@@ -115,7 +115,7 @@ export declare class ContentService {
         imagePath: any;
         fileType: any;
     }): string;
-    static getMediaHostName(): any;
+    static getMediaHostName(): string;
     static parseImageURL(image: any): any;
 }
 export {};

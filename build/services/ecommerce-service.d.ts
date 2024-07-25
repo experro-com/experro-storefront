@@ -63,8 +63,10 @@ export declare class EcommerceService {
     static getFacetByCategoryName(categoryName: any): Promise<any>;
     static getCategoriesAndSubCategories(categoryId?: string): Promise<any>;
     static getAllFacet(): Promise<any>;
-    static getProductReviewsByProductId({ productId }: {
+    static getProductReviewsByProductId({ productId, skip, limit }: {
         productId?: any;
+        skip?: any;
+        limit?: any;
     }): Promise<any>;
     static updateProductReviewByProductIdAndReviewId({ productId, reviewId, }: {
         productId?: any;
@@ -85,6 +87,7 @@ export declare class EcommerceService {
     }): Promise<any>;
     static updateWishlist(wishlistId: any, body: any): Promise<any>;
     static deleteWishlist(wishlistId: any): Promise<any>;
+    static deleteCart(): Promise<any>;
     static getAllWishlists(): Promise<any>;
     static getWishlistById(wishlistId: any): Promise<any>;
     static addItemToWishlist({ wishlistId, body }: {

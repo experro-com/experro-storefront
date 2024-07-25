@@ -22,8 +22,14 @@ export declare class BigCommerceEcomm {
     static deleteItemInCart({ itemId }: {
         itemId?: any;
     }): Promise<any>;
-    static getProductReviewsByProductId({ productId }: {
-        productId: any;
+    static deleteCart(): Promise<any>;
+    static getProductReviewsByProductId({ productId, skip, limit, status, exclude_fields, include_fields }: {
+        productId: string | number;
+        skip: string;
+        limit: string;
+        status: '0' | '1';
+        exclude_fields: string;
+        include_fields: string;
     }): Promise<any>;
     static updateProductReviewByProductIdAndReviewId({ productId, reviewId, }: {
         productId: any;
