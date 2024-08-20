@@ -17,6 +17,7 @@ export declare class ShopifyAuth {
     static deleteCustomerAddress(AddressId: any): Promise<any>;
     static login({ username, password }: LoginRequest): Promise<any>;
     static logout(): Promise<any>;
+    static forceLogout(): Promise<boolean>;
     static activateCustomerAccount({ emailToken, password }: SetNewPassword): Promise<any>;
     static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;

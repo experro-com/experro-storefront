@@ -35,7 +35,7 @@ export declare class AnalyticsService {
         products_detail?: string[] | undefined;
     }): Promise<void>;
     static trackProductAddedToCart({ sku, variantSku, mode, searchTerm, search_location, category, totalValue, quantity, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
-    static trackProductRemovedFromCart({ sku, totalValue, quantity, productCategories, variant_sku, searchTerm, category, search_location, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option, }: any): Promise<void>;
+    static trackProductRemovedFromCart({ sku, name, brand, price, totalValue, quantity, productCategories, variant_sku, searchTerm, category, search_location, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option, }: any): Promise<void>;
     static trackCartViewed({ totalValue, totalQuantity, cartId, baseAmount, cartAmount, discountAmount, items, products }: {
         totalValue: any;
         totalQuantity: any;

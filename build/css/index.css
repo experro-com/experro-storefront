@@ -196,6 +196,44 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #9D9CAF !important;
 }
 
+/******************** start: loader ********************/
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+}
+.loader .spinner {
+  width: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  height: 24px;
+  font-size: 24px;
+  animation-name: spin;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.loader .spinner svg path {
+  fill: #4f46e5;
+}
+.loader.loader-white .spinner svg path {
+  fill: #a5b4fc;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/******************** end: loader ********************/
+.searchHighlight {
+  background-color: #FEF3C7;
+}
+
 #__experro_gjs__ .gjs-trt-trait {
   font-size: 14px;
   font-weight: 400;
@@ -1595,7 +1633,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 400;
   border-bottom: 1px solid #4C4B63;
   padding: 16px 31px 16px 16px;
-  margin: 0 -16px;
+  margin: 0 -10px;
   position: relative;
 }
 .gjs-trt-trait .custom-fields .gjs-sm-sector-title:after {
@@ -2564,6 +2602,39 @@ div#__experro_gjs_loader__ {
   max-height: none;
 }
 
+.storefront-modal input[type=text],
+.storefront-modal input[type=search] {
+  padding: 6px 8px 8px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  height: 34px;
+  color: #201F37;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D1DB;
+  border-radius: 4px;
+}
+.storefront-modal input[type=text].searchInput,
+.storefront-modal input[type=search].searchInput {
+  padding-left: 38px;
+  background-image: url(../images/search-input-icon.png);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 12px center;
+}
+.storefront-modal input[type=text]:hover,
+.storefront-modal input[type=search]:hover {
+  border-color: #818cf8;
+}
+.storefront-modal input[type=text]:focus,
+.storefront-modal input[type=search]:focus {
+  border-color: #4338ca;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+.storefront-modal .modalSearchPanel .searchInput {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
 .selectedProperty {
   display: flex;
   align-items: center;
@@ -3201,14 +3272,14 @@ table.table tr td {
 
 .no-data {
   text-align: center;
-  max-width: 280px;
-  margin: 0 auto;
+  max-width: 320px;
+  margin: 32px auto;
 }
 .no-data svg {
   margin: 0 auto;
 }
 .no-data h5 {
-  margin: 16px 0 12px 0;
+  margin: 16px 0 8px 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -3217,6 +3288,9 @@ table.table tr td {
   color: #9d9caf;
   font-size: 14px;
   line-height: 18px;
+}
+.no-data .ant-btn {
+  margin-top: 24px;
 }
 
 /********* end: select widget modal ************/

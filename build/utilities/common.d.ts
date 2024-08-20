@@ -1,5 +1,6 @@
 export declare class CommonUtilities {
     static getLanguage(): any;
+    static getDefaultLanguage(): any;
     static getTenantId(): any;
     static getWorkspaceId(): any;
     static getEnvironmentId(): any;
@@ -24,6 +25,7 @@ export declare class CommonUtilities {
     static isRenderingInHeadlessBrowser(): boolean;
     static setCurrency(currenyToSet: any): void;
     static getCurrency(): any;
+    static getCustomerGroupId(): any;
     /**
      * This utility file is tasked with parsing the component_content (the experro_storefront, custom traits values specific to our storefront) and
      *  combining it with the other component props, resulting in a unified object.

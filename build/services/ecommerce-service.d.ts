@@ -4,6 +4,7 @@ interface ExpSearchProps {
     isAuto?: boolean;
     searchTerm?: any;
     signal?: any;
+    customerGroupId?: any;
 }
 interface ExpSearchCountProps {
     searchObj?: any;
@@ -11,6 +12,7 @@ interface ExpSearchCountProps {
     key?: any;
     componentId?: any;
     enableSSR?: any;
+    customerGroupId?: any;
 }
 interface ExpSearchAutoSuggestProps {
     searchObj?: any;
@@ -29,6 +31,8 @@ export interface widgetSearchObject {
     limit?: string;
     fieldsToQuery?: string;
     widgetData: widgetSearchWidgetData;
+    currency?: any;
+    customerGroupId?: any;
 }
 export declare class EcommerceService {
     static getCurrencies(): Promise<any>;
@@ -44,8 +48,11 @@ export declare class EcommerceService {
         customerId?: any;
         cartId?: any;
     }): Promise<any>;
-    static addToCart({ line_items }: {
+    static addToCart({ line_items, currency, }: {
         line_items?: any;
+        currency?: {
+            code: string;
+        };
     }): Promise<any>;
     static updateCart({ itemId, line_item }: {
         itemId?: any;
@@ -54,9 +61,9 @@ export declare class EcommerceService {
     static deleteItemInCart({ itemId }: {
         itemId?: any;
     }): Promise<any>;
-    static search({ searchObj, enableSSR, isAuto, searchTerm, signal }: ExpSearchProps): Promise<any>;
+    static search({ searchObj, enableSSR, isAuto, searchTerm, signal, customerGroupId, }: ExpSearchProps): Promise<any>;
     static searchAutoSuggest({ searchObj, signal }: ExpSearchAutoSuggestProps): Promise<any>;
-    static getSearchCount({ searchObj, key, componentId, enableSSR, signal }: ExpSearchCountProps): Promise<any>;
+    static getSearchCount({ searchObj, key, componentId, enableSSR, signal, customerGroupId, }: ExpSearchCountProps): Promise<any>;
     static facetedSearch({ searchObj }: {
         searchObj: any;
     }): Promise<any>;
