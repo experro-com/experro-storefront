@@ -9,6 +9,7 @@ export declare class AuthService {
     static checkSessionInfo(): Promise<any>;
     static getUserSessionInfo(): Promise<any>;
     static isUserLoggedIn(): any;
+    static getCurrentLoggedInUserEmail(): any;
     static getUserDetails(): any;
     static setUserDetails(userDetails: any, isRefresh?: any): void;
     static getCustomerDetails(): Promise<any>;
@@ -27,5 +28,7 @@ export declare class AuthService {
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
     static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
     static activateCustomerAccount({ emailToken, password }: SetNewPassword): Promise<any>;
+    static getCustomerAttributes(): Promise<any>;
+    static updateCustomerAttributes(bodyData: any): Promise<any>;
 }
 export {};

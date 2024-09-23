@@ -2,6 +2,7 @@ export declare class AnalyticsService {
     static isAnalyticsEnabled(): any;
     static isGAEnabled(): Promise<unknown>;
     static themeCurrency(): string;
+    static gTagCurrency(): any;
     static login(email: any): Promise<void>;
     static logout(): Promise<void>;
     static updateUserDetails(userDetails: any): Promise<boolean>;
@@ -23,7 +24,7 @@ export declare class AnalyticsService {
         sku?: string[];
         products_detail?: string[] | undefined;
     }): Promise<void>;
-    static trackWidgetViewed({ noOfResults, products_detail, sku, algorithm, rule, rule_type, widget_id, context_type, context_data, variant, pageType, pageMetaId, pageDisplayName }: any): Promise<void>;
+    static trackWidgetViewed({ noOfResults, products_detail, sku, algorithm, rule, rule_type, widget_id, context_type, context_data, category, variant, pageType, pageMetaId, pageDisplayName }: any): Promise<void>;
     static trackProductViewed({ sku, mode, searchTerm, search_location, category, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
     static trackProductVarientViewed({ sku, mode, searchTerm, search_location, category, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
     static trackCategoryViewed({ categoryName, items, categoryId, provider_id_esi, sku, products_detail }: {

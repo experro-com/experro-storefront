@@ -14,4 +14,6 @@ export declare class ShopifyEcomm {
         itemId: any;
     }): Promise<void>;
     static createProduct(product: any): Promise<any>;
+    static subscribeToNewsLetter(email: any): Promise<any>;
+    static unsubscribeToNewsLetter(email: any): Promise<any>;
 }

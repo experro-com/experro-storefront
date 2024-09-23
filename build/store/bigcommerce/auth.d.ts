@@ -22,5 +22,9 @@ export declare class BigCommerceAuth {
     static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
     static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
+    static getCustomerAttributes(): Promise<any>;
+    static updateCustomerAttributes({ bodyData }: {
+        bodyData: any;
+    }): Promise<any>;
 }
 export {};

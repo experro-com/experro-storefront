@@ -1321,6 +1321,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 10px;
   display: inline-block;
 }
+.exp-ui-builder-droppable .gjs-custom-text {
+  padding: 10px;
+}
 .exp-ui-builder-droppable .gjs-cell {
   outline: 1px dashed rgba(170, 170, 170, 0.7);
   outline-offset: -2px;

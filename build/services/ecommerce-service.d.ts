@@ -40,9 +40,12 @@ export declare class EcommerceService {
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
-    static createCart({ customerId, line_items }: {
+    static createCart({ customerId, line_items, currency }: {
         customerId?: any;
         line_items?: any;
+        currency?: {
+            code: string;
+        };
     }): Promise<any>;
     static updateCustomerId({ customerId, cartId }: {
         customerId?: any;
@@ -60,6 +63,11 @@ export declare class EcommerceService {
     }): Promise<any>;
     static deleteItemInCart({ itemId }: {
         itemId?: any;
+    }): Promise<any>;
+    static getProductByCollection({ currency, field_name, field_value }: {
+        currency: any;
+        field_name: any;
+        field_value: any;
     }): Promise<any>;
     static search({ searchObj, enableSSR, isAuto, searchTerm, signal, customerGroupId, }: ExpSearchProps): Promise<any>;
     static searchAutoSuggest({ searchObj, signal }: ExpSearchAutoSuggestProps): Promise<any>;
@@ -121,9 +129,11 @@ export declare class EcommerceService {
     }): Promise<any>;
     static emailTemplateForms(formId: string, formMapping: any): Promise<any>;
     static subscribeToNewsLetter(email: any): Promise<any>;
+    static unsubscribeToNewsLetter(email: any): Promise<any>;
     static getUserLocation(): Promise<any>;
     static getPersonalizationWidgetList(algorithmInternalName: any, fieldsToQuery?: string): Promise<any>;
     static widgetSearch(searchWidgetObject?: widgetSearchObject): Promise<any>;
     static createProduct(product: any): Promise<any>;
+    static getStoreLocations(): Promise<any>;
 }
 export {};
