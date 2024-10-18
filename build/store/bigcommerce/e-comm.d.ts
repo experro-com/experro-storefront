@@ -4,9 +4,10 @@ export declare class BigCommerceEcomm {
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
-    static createCart({ customerId, line_items, currency }: {
+    static createCart({ customerId, line_items, gift_certificates, currency }: {
         customerId?: any;
         line_items?: any;
+        gift_certificates?: any;
         currency?: {
             code: string;
         };
@@ -15,8 +16,9 @@ export declare class BigCommerceEcomm {
         customerId?: any;
         cartId?: any;
     }): Promise<any>;
-    static addToCart({ line_items, currency }: {
+    static addToCart({ line_items, gift_certificates, currency }: {
         line_items?: any;
+        gift_certificates?: any;
         currency?: {
             code: string;
         };
@@ -68,4 +70,5 @@ export declare class BigCommerceEcomm {
     }): Promise<any>;
     static subscribeToNewsLetter(email: any): Promise<any>;
     static getStoreLocations(): Promise<any>;
+    static getGiftCertificateBalance(code: string): Promise<any>;
 }
