@@ -48,7 +48,7 @@ export declare class AnalyticsService {
         products: any;
     }): Promise<void>;
     static trackCheckoutInitiated({ items, totalValue, cartId, totalQuantity, products }: any): Promise<void>;
-    static trackCheckoutCompleted({ items, totalValue, cartId, totalQuantity, subtotal_tax, currency_code, base_handling_cost, base_shipping_cost, discount_amount, handling_cost_ex_tax, shipping_cost_ex_tax, subtotal_ex_tax, total_ex_tax, wrapping_cost_ex_tax, payment_method, shipping_method, products }: any): Promise<void>;
+    static trackCheckoutCompleted({ items, totalValue, cartId, orderId, totalQuantity, subtotal_tax, currency_code, base_handling_cost, base_shipping_cost, discount_amount, handling_cost_ex_tax, shipping_cost_ex_tax, subtotal_ex_tax, total_ex_tax, wrapping_cost_ex_tax, payment_method, shipping_method, products }: any): Promise<void>;
     static trackWidgetLoaded({ widgetId, widgetName, type, algorithm }: {
         widgetId: any;
         widgetName: any;
