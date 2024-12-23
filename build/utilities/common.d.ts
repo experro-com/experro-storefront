@@ -2,6 +2,7 @@ export declare class CommonUtilities {
     static getLanguage(): any;
     static getDefaultLanguage(): any;
     static getTenantId(): any;
+    static getStoreURL(): any;
     static getWorkspaceId(): any;
     static getEnvironmentId(): any;
     static getCustomDomain(): string;

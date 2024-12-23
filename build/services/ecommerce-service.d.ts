@@ -6,6 +6,12 @@ interface ExpSearchProps {
     signal?: any;
     customerGroupId?: any;
 }
+interface ExpImageSearchProps {
+    base64Image: string;
+    skip?: number;
+    limit?: number;
+    fieldsToQuery: string;
+}
 interface ExpSearchCountProps {
     searchObj?: any;
     signal?: any;
@@ -37,6 +43,7 @@ export interface widgetSearchObject {
 export declare class EcommerceService {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
+    static getCartWithDiscountDetails(): Promise<any>;
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
@@ -52,6 +59,7 @@ export declare class EcommerceService {
         customerId?: any;
         cartId?: any;
     }): Promise<any>;
+    static initCheckout(): Promise<any>;
     static addToCart({ line_items, gift_certificates, currency, }: {
         line_items?: any;
         gift_certificates?: any;
@@ -71,6 +79,7 @@ export declare class EcommerceService {
         field_name: any;
         field_value: any;
     }): Promise<any>;
+    static imageSearch({ base64Image, skip, limit, fieldsToQuery }: ExpImageSearchProps): Promise<any>;
     static search({ searchObj, enableSSR, isAuto, searchTerm, signal, customerGroupId, }: ExpSearchProps): Promise<any>;
     static searchAutoSuggest({ searchObj, signal }: ExpSearchAutoSuggestProps): Promise<any>;
     static getSearchCount({ searchObj, key, componentId, enableSSR, signal, customerGroupId, }: ExpSearchCountProps): Promise<any>;
@@ -99,20 +108,22 @@ export declare class EcommerceService {
     static removeCouponCodeById({ couponId }: {
         couponId?: any;
     }): Promise<any>;
+    static removeAllCouponCode(): Promise<any>;
     static createWishlist({ body }: {
         body?: any;
     }): Promise<any>;
     static updateWishlist(wishlistId: any, body: any): Promise<any>;
+    static getCheckoutInfo(checkoutId: string): Promise<any>;
     static deleteWishlist(wishlistId: any): Promise<any>;
     static deleteCart(): Promise<any>;
     static getAllWishlists(): Promise<any>;
     static getWishlistById(wishlistId: any): Promise<any>;
     static addItemToWishlist({ wishlistId, body }: {
-        wishlistId: any;
+        wishlistId?: any;
         body: any;
     }): Promise<any>;
     static deleteItemFromWishlistById({ wishlistId, itemId }: {
-        wishlistId: any;
+        wishlistId?: any;
         itemId: any;
     }): Promise<any>;
     static searchProductByField({ fieldName, fieldValue, fieldsToQuery, filter }: {

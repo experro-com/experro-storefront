@@ -2132,7 +2132,7 @@ span.gjs-off-prv.fa.fa-eye-slash {
   border-bottom: 1px solid #383751;
 }
 .deviceImageTab .deviceImageTabButton button {
-  padding: 8px 12px;
+  padding: 8px;
   flex: 1;
   background-color: #111024;
   border-bottom: 2px solid transparent;
@@ -2783,6 +2783,13 @@ div#__experro_gjs_loader__ {
 }
 .ReactModal__Content .reactModalBody table.table tr td .elementName {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.ReactModal__Content .reactModalBody table.table tr td .elementName .linkIcon {
+  margin-left: 8px;
+  opacity: 0;
+  transition: all 300ms ease-in-out 0s;
 }
 .ReactModal__Content .reactModalBody table.table tr td .checkBlueIcon {
   display: flex;
@@ -2803,8 +2810,12 @@ div#__experro_gjs_loader__ {
   color: #201F37;
   background: none;
 }
-.ReactModal__Content .reactModalBody table.table tr.selectedRow, .ReactModal__Content .reactModalBody table.table tr:hover {
+.ReactModal__Content .reactModalBody table.table tr:hover, .ReactModal__Content .reactModalBody table.table tr.selectedRow {
   background-color: #eef2ff;
+}
+.ReactModal__Content .reactModalBody table.table tr:hover td .elementName .linkIcon, .ReactModal__Content .reactModalBody table.table tr.selectedRow td .elementName .linkIcon {
+  opacity: 1;
+  transition: all 300ms ease-in-out 0s;
 }
 .ReactModal__Content .reactModalFooter {
   padding: 16px 24px;
