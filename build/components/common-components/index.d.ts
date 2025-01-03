@@ -12,4 +12,5 @@ import ExpDataSourceDropDown1 from './data-source';
 import ExpContentModelListPopUp from './content-modal-list-popup';
 import ExpImageselector from './image-selector';
 import ExpImagePicker from './image-picker';
-export { ExpTextInput, ExpDataSourceDropDown, ExpTextAreaInput, ExpContentModelListDropDown, ExpCustomeImageInput, ExpCustomImageselector, ExpContentModalPopUp, ExpCheckboxInput, ExpColorPickerInput, ExpDropDownInput, ExpDataSourceDropDown1, ExpContentModelListPopUp, ExpImageselector, ExpImagePicker, };
+import ExpColor from './color-trait';
+export { ExpTextInput, ExpDataSourceDropDown, ExpTextAreaInput, ExpContentModelListDropDown, ExpCustomeImageInput, ExpCustomImageselector, ExpContentModalPopUp, ExpCheckboxInput, ExpColorPickerInput, ExpDropDownInput, ExpDataSourceDropDown1, ExpContentModelListPopUp, ExpImageselector, ExpImagePicker, ExpColor };
