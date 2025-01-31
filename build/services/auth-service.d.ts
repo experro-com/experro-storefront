@@ -25,11 +25,13 @@ export declare class AuthService {
     static login({ username, password }: LoginRequest): Promise<any>;
     static forceLogout(): Promise<any>;
     static logout(): Promise<any>;
-    static signup({ firstName, lastName, middleName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
+    static signup({ firstName, lastName, middleName, email, password, phone, company, customFields, gctoken, formFields }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
     static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
     static activateCustomerAccount({ emailToken, password, }: SetNewPassword): Promise<any>;
     static getCustomerAttributes(): Promise<any>;
     static updateCustomerAttributes(bodyData: any): Promise<any>;
+    static getDefaultCustomerGroup(): Promise<any>;
+    static getSignUpFormFields(): Promise<any>;
 }
 export {};

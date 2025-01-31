@@ -1,3 +1,7 @@
+declare type includesType = 'addresses' | 'storecredit' | 'attributes' | 'formfields' | 'shopper_profile_id' | 'segment_ids';
+export interface getCustomersDetailsType {
+    include?: includesType[];
+}
 export declare class BigCommerceEcomm {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
@@ -72,4 +76,13 @@ export declare class BigCommerceEcomm {
     static subscribeToNewsLetter(email: any): Promise<any>;
     static getStoreLocations(): Promise<any>;
     static getGiftCertificateBalance(code: string): Promise<any>;
+    /**
+     * @returns For logged in user it will give the userDetails with with attributes of bigcommerce
+     */
+    static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
+    /**
+     * @returns The attributes of the available from the bigcommerce.
+     */
+    static getCustomerAttributes(): Promise<any>;
 }
+export {};

@@ -1,3 +1,4 @@
+import { getCustomersDetailsType } from '../store/bigcommerce/e-comm';
 interface ExpSearchProps {
     searchObj?: any;
     enableSSR?: boolean;
@@ -149,5 +150,7 @@ export declare class EcommerceService {
     static createProduct(product: any): Promise<any>;
     static getStoreLocations(): Promise<any>;
     static getGiftCertificateBalance(code: string): Promise<any>;
+    static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
+    static getCustomerAttributes(): Promise<any>;
 }
 export {};
