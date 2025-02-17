@@ -3,7 +3,7 @@ export declare class AnalyticsService {
     static isGAEnabled(): Promise<unknown>;
     static themeCurrency(): string;
     static gTagCurrency(): any;
-    static login(email: any): Promise<void>;
+    static login(email: any, sourceType?: string, loginMethod?: string): Promise<void>;
     static logout(): Promise<void>;
     static updateUserDetails(userDetails: any): Promise<boolean>;
     static trackPageView({ pageTitle, pageUrl }: {
