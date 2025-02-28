@@ -28,4 +28,5 @@ export declare class MagentoEcomm {
     static deleteItemFromWishlistById({ itemId }: {
         itemId: any;
     }): Promise<any>;
+    static subscribeToNewsLetter(email: any): Promise<any>;
 }
