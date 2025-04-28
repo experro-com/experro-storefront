@@ -6,7 +6,7 @@ interface LoginRequest {
 }
 export declare class BigCommerceAuth {
     static getCustomerDetails(): Promise<any>;
-    static getCustomerOrders(): Promise<any>;
+    static getCustomerOrders(queryParameters?: string): Promise<any>;
     static updateCustomerDetails(commonDetails: any, dynamicDetails: any): Promise<any>;
     static getCustomerAddresses(): Promise<any>;
     static createCustomerAddress(bodyData: any): Promise<any>;

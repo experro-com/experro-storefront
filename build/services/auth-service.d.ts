@@ -13,7 +13,7 @@ export declare class AuthService {
     static getUserDetails(): any;
     static setUserDetails(userDetails: any, isRefresh?: any): void;
     static getCustomerDetails(): Promise<any>;
-    static getCustomerOrders(): Promise<any>;
+    static getCustomerOrders(queryParameters?: string): Promise<any>;
     static updateCustomerDetails(commonDetails: any, dynamicDetails?: string): Promise<any>;
     static getCustomerAddresses(): Promise<any>;
     static getCountries(): Promise<any>;
