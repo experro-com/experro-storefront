@@ -1,32 +1,19 @@
-declare type includesType = 'addresses' | 'storecredit' | 'attributes' | 'formfields' | 'shopper_profile_id' | 'segment_ids';
-export interface getCustomersDetailsType {
-    include?: includesType[];
-}
 export declare class BigCommerceEcomm {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
     static getAbandonedCart(token: string | null): Promise<any>;
-    static getCheckoutInfo(checkoutId: string): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
-    static createCart({ customerId, line_items, gift_certificates, currency }: {
+    static createCart({ customerId, line_items }: {
         customerId?: any;
         line_items?: any;
-        gift_certificates?: any;
-        currency?: {
-            code: string;
-        };
     }): Promise<any>;
     static updateCustomerId({ customerId, cartId }: {
         customerId?: any;
         cartId?: any;
     }): Promise<any>;
-    static addToCart({ line_items, gift_certificates, currency }: {
+    static addToCart({ line_items }: {
         line_items?: any;
-        gift_certificates?: any;
-        currency?: {
-            code: string;
-        };
     }): Promise<any>;
     static updateCart({ itemId, line_item }: {
         itemId?: any;
@@ -35,14 +22,8 @@ export declare class BigCommerceEcomm {
     static deleteItemInCart({ itemId }: {
         itemId?: any;
     }): Promise<any>;
-    static deleteCart(): Promise<any>;
-    static getProductReviewsByProductId({ productId, skip, limit, status, exclude_fields, include_fields }: {
-        productId: string | number;
-        skip: string;
-        limit: string;
-        status: '0' | '1';
-        exclude_fields: string;
-        include_fields: string;
+    static getProductReviewsByProductId({ productId }: {
+        productId: any;
     }): Promise<any>;
     static updateProductReviewByProductIdAndReviewId({ productId, reviewId, }: {
         productId: any;
@@ -74,15 +55,4 @@ export declare class BigCommerceEcomm {
         itemId: any;
     }): Promise<any>;
     static subscribeToNewsLetter(email: any): Promise<any>;
-    static getStoreLocations(): Promise<any>;
-    static getGiftCertificateBalance(code: string): Promise<any>;
-    /**
-     * @returns For logged in user it will give the userDetails with with attributes of bigcommerce
-     */
-    static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
-    /**
-     * @returns The attributes of the available from the bigcommerce.
-     */
-    static getCustomerAttributes(): Promise<any>;
 }
-export {};

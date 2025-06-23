@@ -69,23 +69,9 @@ interface searchContentModelRecordsByFieldKeyValue {
     relationField?: string;
     relationFieldDataToQuery?: string;
     filter?: any;
-    ssrKey?: string;
     enableSSR?: any;
     fieldType?: 'parent' | 'child';
     callForceFully?: boolean;
-}
-interface searchMultipleContentModelRecordsByFieldKeyValue {
-    modelInternalNames: string;
-    fieldKey?: string;
-    fieldsToQuery?: string;
-    sortBy?: string;
-    orderBy?: string;
-    limit?: string;
-    skip?: string;
-    enableSSR?: boolean;
-    ssrKey?: string;
-    fieldType?: 'parent' | 'child';
-    searchText: string;
 }
 interface fetchContentModelRecordsByFieldKeyValue {
     modelInternalName: string;
@@ -112,9 +98,8 @@ export declare class ContentService {
     static getLocationsByPlaceName({ radius, modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType, }: getLocationsByPlaceName): Promise<any>;
     static getSingleTypeContent({ versionId, modelName, componentId, ssrKey, enableSSR, callForceFully, }: GetSingleTypeContentRequest): Promise<any>;
     static getMenuById(menuId: any): Promise<any>;
-    static searchMultipleContentModelRecordsByFieldKeyValuePOST({ modelInternalNames, fieldKey, fieldsToQuery, sortBy, orderBy, limit, skip, enableSSR, ssrKey, searchText }: searchMultipleContentModelRecordsByFieldKeyValue): Promise<any>;
-    static searchContentModelRecordsByFieldKeyValuePOST({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, enableSSR, ssrKey, fieldType, }: searchContentModelRecordsByFieldKeyValue): Promise<any>;
-    static searchContentModelRecordsByFieldKeyValueGET({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, ssrKey, enableSSR, fieldType, callForceFully }: searchContentModelRecordsByFieldKeyValue): Promise<any>;
+    static searchContentModelRecordsByFieldKeyValuePOST({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, enableSSR, fieldType, }: searchContentModelRecordsByFieldKeyValue): Promise<any>;
+    static searchContentModelRecordsByFieldKeyValueGET({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, enableSSR, fieldType, callForceFully }: searchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, sortType, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType, callForceFully, }: GetContentModelRecordsByFieldKeyValue): Promise<any>;
     static fetchContentModelRecordsByFieldKeyValue({ modelInternalName, fieldKey, fieldValue, fieldsToQuery, sortBy, orderBy, limit, skip, relationField, relationFieldDataToQuery, filter, contentDataSortBy, enableSSR, fieldType }: fetchContentModelRecordsByFieldKeyValue): Promise<any>;
     static getFormFieldsByFormId({ formId }: {
@@ -129,7 +114,7 @@ export declare class ContentService {
         imagePath: any;
         fileType: any;
     }): string;
-    static getMediaHostName(): string;
+    static getMediaHostName(): any;
     static parseImageURL(image: any): any;
 }
 export {};

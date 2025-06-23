@@ -22,7 +22,6 @@ let Page = cmsAppExportObjects.Page;
 let AnalyticsService = cmsAppExportObjects.AnalyticsService;
 let BigcommerceService = cmsAppExportObjects.BigcommerceService;
 let Select = cmsAppExportObjects.Select;
-let contentServiceResponseParser = cmsAppExportObjects.contentServiceResponseParser;
 
 if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -50,7 +49,6 @@ if (process.env.REACT_APP_BUILD_TARGET === 'app-ui-builder') {
   AnalyticsService = uiBuilderAppExportObjects.AnalyticsService;
   BigcommerceService = uiBuilderAppExportObjects.BigcommerceService;
   Select = uiBuilderAppExportObjects.Select;
-  contentServiceResponseParser = uiBuilderAppExportObjects.contentServiceResponseParser;
 }
 
 export {
@@ -76,5 +74,4 @@ export {
   AnalyticsService,
   BigcommerceService,
   Select,
-  contentServiceResponseParser,
 };

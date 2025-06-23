@@ -1,1 +1,1 @@
-export default function rgbHex(r: any, g: any, b: any, a: any): string;
+export default function rgbHex(red: any, green: any, blue: any, alpha: any): string;

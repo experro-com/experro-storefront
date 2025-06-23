@@ -6,7 +6,7 @@ interface LoginRequest {
 }
 export declare class BigCommerceAuth {
     static getCustomerDetails(): Promise<any>;
-    static getCustomerOrders(queryParameters?: string): Promise<any>;
+    static getCustomerOrders(): Promise<any>;
     static updateCustomerDetails(commonDetails: any, dynamicDetails: any): Promise<any>;
     static getCustomerAddresses(): Promise<any>;
     static createCustomerAddress(bodyData: any): Promise<any>;
@@ -19,14 +19,8 @@ export declare class BigCommerceAuth {
     static forceLogout(): Promise<boolean>;
     static login({ username, password }: LoginRequest): Promise<any>;
     static logout(): Promise<any>;
-    static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, formFields }: SignupInterface): Promise<any>;
+    static signup({ firstName, lastName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
     static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
-    static getCustomerAttributes(): Promise<any>;
-    static updateCustomerAttributes({ bodyData }: {
-        bodyData: any;
-    }): Promise<any>;
-    static getDefaultCustomerGroup(): Promise<any>;
-    static getSignUpFormFields(): Promise<any>;
 }
 export {};

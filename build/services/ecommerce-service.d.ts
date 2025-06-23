@@ -1,17 +1,9 @@
-import { getCustomersDetailsType } from '../store/bigcommerce/e-comm';
 interface ExpSearchProps {
     searchObj?: any;
     enableSSR?: boolean;
     isAuto?: boolean;
     searchTerm?: any;
     signal?: any;
-    customerGroupId?: any;
-}
-interface ExpImageSearchProps {
-    base64Image: string;
-    skip?: number;
-    limit?: number;
-    fieldsToQuery: string;
 }
 interface ExpSearchCountProps {
     searchObj?: any;
@@ -19,7 +11,6 @@ interface ExpSearchCountProps {
     key?: any;
     componentId?: any;
     enableSSR?: any;
-    customerGroupId?: any;
 }
 interface ExpSearchAutoSuggestProps {
     searchObj?: any;
@@ -38,35 +29,23 @@ export interface widgetSearchObject {
     limit?: string;
     fieldsToQuery?: string;
     widgetData: widgetSearchWidgetData;
-    currency?: any;
-    customerGroupId?: any;
 }
 export declare class EcommerceService {
     static getCurrencies(): Promise<any>;
     static getCart(): Promise<any>;
-    static getCartWithDiscountDetails(): Promise<any>;
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
-    static createCart({ customerId, line_items, gift_certificates, currency }: {
+    static createCart({ customerId, line_items }: {
         customerId?: any;
         line_items?: any;
-        gift_certificates?: any;
-        currency?: {
-            code: string;
-        };
     }): Promise<any>;
     static updateCustomerId({ customerId, cartId }: {
         customerId?: any;
         cartId?: any;
     }): Promise<any>;
-    static initCheckout(): Promise<any>;
-    static addToCart({ line_items, gift_certificates, currency, }: {
+    static addToCart({ line_items }: {
         line_items?: any;
-        gift_certificates?: any;
-        currency?: {
-            code: string;
-        };
     }): Promise<any>;
     static updateCart({ itemId, line_item }: {
         itemId?: any;
@@ -75,25 +54,17 @@ export declare class EcommerceService {
     static deleteItemInCart({ itemId }: {
         itemId?: any;
     }): Promise<any>;
-    static getProductByCollection({ currency, field_name, field_value }: {
-        currency: any;
-        field_name: any;
-        field_value: any;
-    }): Promise<any>;
-    static imageSearch({ base64Image, skip, limit, fieldsToQuery }: ExpImageSearchProps): Promise<any>;
-    static search({ searchObj, enableSSR, isAuto, searchTerm, signal, customerGroupId, }: ExpSearchProps): Promise<any>;
+    static search({ searchObj, enableSSR, isAuto, searchTerm, signal }: ExpSearchProps): Promise<any>;
     static searchAutoSuggest({ searchObj, signal }: ExpSearchAutoSuggestProps): Promise<any>;
-    static getSearchCount({ searchObj, key, componentId, enableSSR, signal, customerGroupId, }: ExpSearchCountProps): Promise<any>;
+    static getSearchCount({ searchObj, key, componentId, enableSSR, signal }: ExpSearchCountProps): Promise<any>;
     static facetedSearch({ searchObj }: {
         searchObj: any;
     }): Promise<any>;
     static getFacetByCategoryName(categoryName: any): Promise<any>;
     static getCategoriesAndSubCategories(categoryId?: string): Promise<any>;
     static getAllFacet(): Promise<any>;
-    static getProductReviewsByProductId({ productId, skip, limit }: {
+    static getProductReviewsByProductId({ productId }: {
         productId?: any;
-        skip?: any;
-        limit?: any;
     }): Promise<any>;
     static updateProductReviewByProductIdAndReviewId({ productId, reviewId, }: {
         productId?: any;
@@ -109,22 +80,19 @@ export declare class EcommerceService {
     static removeCouponCodeById({ couponId }: {
         couponId?: any;
     }): Promise<any>;
-    static removeAllCouponCode(): Promise<any>;
     static createWishlist({ body }: {
         body?: any;
     }): Promise<any>;
     static updateWishlist(wishlistId: any, body: any): Promise<any>;
-    static getCheckoutInfo(checkoutId: string): Promise<any>;
     static deleteWishlist(wishlistId: any): Promise<any>;
-    static deleteCart(): Promise<any>;
     static getAllWishlists(): Promise<any>;
     static getWishlistById(wishlistId: any): Promise<any>;
     static addItemToWishlist({ wishlistId, body }: {
-        wishlistId?: any;
+        wishlistId: any;
         body: any;
     }): Promise<any>;
     static deleteItemFromWishlistById({ wishlistId, itemId }: {
-        wishlistId?: any;
+        wishlistId: any;
         itemId: any;
     }): Promise<any>;
     static searchProductByField({ fieldName, fieldValue, fieldsToQuery, filter }: {
@@ -143,14 +111,9 @@ export declare class EcommerceService {
     }): Promise<any>;
     static emailTemplateForms(formId: string, formMapping: any): Promise<any>;
     static subscribeToNewsLetter(email: any): Promise<any>;
-    static unsubscribeToNewsLetter(email: any): Promise<any>;
     static getUserLocation(): Promise<any>;
     static getPersonalizationWidgetList(algorithmInternalName: any, fieldsToQuery?: string): Promise<any>;
     static widgetSearch(searchWidgetObject?: widgetSearchObject): Promise<any>;
     static createProduct(product: any): Promise<any>;
-    static getStoreLocations(): Promise<any>;
-    static getGiftCertificateBalance(code: string): Promise<any>;
-    static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
-    static getCustomerAttributes(): Promise<any>;
 }
 export {};
