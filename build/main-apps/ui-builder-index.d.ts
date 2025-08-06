@@ -1,4 +1,5 @@
 import '../globals';
 import { AppInit } from '../interfaces/app-init';
-declare function App({ templates, widgets, components, singleDataModelsToPrefetch, routes, headerComponent, footerComponent, pencilBannerComponent, handleI18 }: AppInit): void;
+declare function App({ templates, widgets, components, customTraits, // Add this parameter
+routes, singleDataModelsToPrefetch, headerComponent, footerComponent, pencilBannerComponent, handleI18, toastComponent, }: AppInit): void;
 export { App };
