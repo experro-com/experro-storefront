@@ -26,7 +26,7 @@ export declare class AnalyticsService {
     }): Promise<void>;
     static trackWidgetViewed({ noOfResults, products_detail, sku, algorithm, rule, rule_type, widget_id, context_type, context_data, category, variant, pageType, pageMetaId, pageDisplayName }: any): Promise<void>;
     static trackProductViewed({ sku, mode, searchTerm, search_location, category, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
-    static trackProductVarientViewed({ sku, mode, searchTerm, search_location, category, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
+    static trackProductVarientViewed({ sku, variant_sku, mode, searchTerm, search_location, category, price, name, brand, productCategories, is_primary_algorithm, is_secondary_algorithm, algorithm, is_merchandising, rule, rule_type, widget_id, context_type, context_data, variant, rules, mode_details, product_option }: any): Promise<void>;
     static trackCategoryViewed({ categoryName, items, categoryId, provider_id_esi, sku, products_detail }: {
         categoryName: string;
         items: any;
