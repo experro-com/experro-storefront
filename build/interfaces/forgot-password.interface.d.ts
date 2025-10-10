@@ -3,5 +3,8 @@ export interface ForgotPassword {
 }
 export interface SetNewPassword {
     password: string;
-    emailToken: string;
+    emailToken?: string;
+    rpToken?: string;
+    customerId?: string;
+    email?: string;
 }

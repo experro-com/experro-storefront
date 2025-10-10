@@ -26,6 +26,6 @@ export declare class MagentoAuth {
     static logout(): Promise<any>;
     static signup({ firstName, lastName, middleName, email, password, phone, company, customFields, gctoken, }: SignupInterface): Promise<any>;
     static forgotPassword({ email }: ForgotPassword): Promise<any>;
-    static setNewPassword({ emailToken, password }: SetNewPassword): Promise<any>;
+    static setNewPassword({ password, rpToken, customerId, email }: SetNewPassword): Promise<any>;
 }
 export {};
