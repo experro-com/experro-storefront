@@ -5,6 +5,7 @@ export interface ExpImageSearchProps {
     skip?: number;
     limit?: number;
     fieldsToQuery: string;
+    domain?: string;
 }
 export interface facetsArr {
     field_internal_name: string;
@@ -64,6 +65,9 @@ export interface expAutoSuggest {
 export interface searchBody {
     category_id?: string;
     search_term?: string;
+    collection_id?: string;
+    category_name?: string;
+    out_of_stock?: string;
     facets?: {
         field_internal_name: string;
         value?: string;
@@ -113,7 +117,7 @@ export declare class EcommerceService {
     static getAbandonedCart(token: string | null): Promise<any>;
     static getCartRedirectUrls(): Promise<any>;
     static getOrderById(orderId: string | number): Promise<any>;
-    static imageSearch({ base64Image, skip, limit, fieldsToQuery, }: ExpImageSearchProps): Promise<any>;
+    static imageSearch({ base64Image, skip, limit, fieldsToQuery, domain, }: ExpImageSearchProps): Promise<any>;
     static search(searchConfig: search): Promise<any>;
     static getFacetData({ categoryId, searchTerm, facets, include_fields_meta, }: getFacetsData): Promise<any>;
     static getCategoriesAndSubCategories(categoryId?: string, include_fields_meta?: boolean): Promise<any>;
@@ -214,4 +218,7 @@ export declare class EcommerceService {
     static getGiftCertificateBalance(code: string): Promise<any>;
     static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
     static getCustomerAttributes(): Promise<any>;
+    static getParentProductRelations(productId: {
+        productId?: any;
+    }): Promise<any>;
 }

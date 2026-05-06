@@ -1,6 +1,7 @@
 export interface GetPageDataRequest {
     pageSlug: string;
     versionId?: string;
+    variantId?: string;
     lang?: string;
     callForceFully?: boolean;
     include_fields_meta?: boolean;
@@ -123,7 +124,7 @@ export interface fetchContentModelRecordsByFieldKeyValue {
 }
 export declare class ContentService {
     private static __pageData__;
-    static getPageDataBySlug({ pageSlug, versionId, lang, include_fields_meta, }: GetPageDataRequest): Promise<any>;
+    static getPageDataBySlug({ pageSlug, versionId, variantId, lang, include_fields_meta, }: GetPageDataRequest): Promise<any>;
     static getCollectionRecordsByCollectionInternalName({ modelInternalName, include_fields_meta, limit, skip }: GetCollectionRecordsByInternalName): Promise<any>;
     static getCollectionTypeContentById({ id, versionId, modelName, componentId, ssrKey, enableSSR, include_fields_meta, }: GetCollectionContentByIdRequest): Promise<any>;
     static getRecordById({ id, versionId, modelName, componentId, ssrKey, enableSSR, include_fields_meta, }: GetCollectionContentByIdRequest): Promise<any>;

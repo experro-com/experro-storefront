@@ -1,2 +1,2 @@
-declare const _default: (editor: any, opts: any) => void;
+declare const _default: (editor: any) => void;
 export default _default;
