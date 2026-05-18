@@ -214,4 +214,7 @@ export declare class EcommerceService {
     static getGiftCertificateBalance(code: string): Promise<any>;
     static getCustomersDetails(args?: getCustomersDetailsType): Promise<any>;
     static getCustomerAttributes(): Promise<any>;
+    static getParentProductRelations(productId: {
+        productId?: any;
+    }): Promise<any>;
 }

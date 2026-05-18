@@ -9,6 +9,7 @@ export default interface SignupInterface {
     customFields?: Array<CustomFieldInterface>;
     gctoken?: string;
     formFields?: Array<formFieldsInterface>;
+    channelIds?: Array<number>;
 }
 export interface CustomFieldInterface {
     fieldId: string;

@@ -12,4 +12,5 @@ export interface ContentModelListInterface {
     published_version_name: string;
     id: string;
     current_version_id: string;
+    active_variant_id: string;
 }
